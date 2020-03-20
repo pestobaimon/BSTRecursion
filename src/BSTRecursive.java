@@ -185,9 +185,9 @@ public class BSTRecursive {
 	 */
 	public void insertInOrder(BSTNode n) {
 		BSTNode root = n;
-		if(n.left!=null)	insertInOrder(n.left);
+		if(n.left!=null) insertInOrder(n.left);
 		this.insert(n.data);
-		if(n.right!=null)	insertInOrder(n.right);
+		if(n.right!=null) insertInOrder(n.right);
 	}
 	
 	/**
@@ -203,8 +203,7 @@ public class BSTRecursive {
 	public int nextOf(BSTNode n,int v) {
 		int nextMax;
 		if(v >= n.data) {
-			if(n.right != null)
-				nextMax = nextOf(n.right, v);
+			if(n.right != null) nextMax = nextOf(n.right, v);
 			else nextMax = v;
 		}else{
 			nextMax = n.data;
